@@ -95,6 +95,15 @@ p {
     }
 }
 
+.profile-photo {
+    display: block;
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin: 20px auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 footer {
     background-color: var(--azul-profissional);
     color: var(--branco);
