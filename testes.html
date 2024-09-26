@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Portfólio de Vítor Almeida Machado, desenvolvedor web.">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfólio Pessoal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@300;400;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --azul-profissional: #003366;
+            --cinza-claro: #eaeaea;
+            --cinza-escuro: #333333;
+            --branco: #ffffff;
+            --verde-profissional: #0e71d4;
+            --fundo-header: #f5f5f5;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--cinza-claro);
+            margin: 0;
+            padding: 0;
+            color: var(--cinza-escuro);
+            transition: background-color 0.3s ease;
+        }
+
+        header {
+            background-color: var(--azul-profissional);
+            color: var(--branco);
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        header.scrolled {
+            background-color: var(--fundo-header);
+            color: var(--cinza-escuro);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--branco);
+            margin: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            padding: 10px 15px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            transform: scale(1.1);
+            background-color: var(--verde-profissional);
+            border: 1px solid var(--verde-profissional);
+        }
+
+        main {
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+            background-color: var(--branco);
+            transition: background-color 0.3s ease;
+        }
+
+        h2 {
+            font-family: 'Josefin Slab', serif;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .page {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+            padding: 20px;
+            border-bottom: 1px solid var(--cinza-escuro);
+        }
+
+        .page.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 0.6s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        footer {
+            background-color: var(--azul-profissional);
+            color: var(--branco);
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header id="header">
+    <h1 id="name">Portfólio Profissional</h1>
+    <nav>
+        <a href="#" data-target="sobre">Sobre Mim</a>
+        <a href="#" data-target="dados-pessoais">Dados Pessoais</a>
+        <a href="#" data-target="objetivos-profissionais">Objetivos Profissionais</a>
+        <a href="#" data-target="formacao">Formação Acadêmica</a>
+        <a href="#" data-target="experiencia">Experiência Profissional</a>
+        <a href="#" data-target="contato">Contato</a>
+    </nav>
+</header>
+
+<main>
+    <section id="sobre" class="page active">
+        <h2>Sobre Mim</h2>
+        <p class="fade-in">Olá! Me chamo Vítor. Com experiência em Java, SQL e Python, atuo como testador de software, buscando sempre garantir a qualidade e o desempenho das aplicações. Minha paixão por tecnologia me motiva a criar soluções que façam a diferença e contribuam para um mundo mais conectado. "Qualidade e inovação a serviço da tecnologia."</p>
+    </section>
+
+    <section id="dados-pessoais" class="page">
+        <h2>Dados Pessoais</h2>
+        <p class="fade-in">Vítor Almeida Machado, 24 anos, (54) 99613-8108 e Carazinho - RS.</p>
+    </section>
+
+    <section id="objetivos-profissionais" class="page">
+        <h2>Objetivos Profissionais</h2>
+        <p class="fade-in">Meu objetivo é continuar me especializando na área de testes de software, aprimorando minhas habilidades técnicas e analíticas. Desejo contribuir para projetos inovadores que desafiem meus conhecimentos e promovam o desenvolvimento de soluções eficientes e de alta qualidade.</p>
+    </section>
+
+    <section id="formacao" class="page">
+        <h2>Formação Acadêmica</h2>
+        <p class="fade-in">Ciência da Computação - Atitus Educação, 5º Semestre.</p>
+    </section>
+
+    <section id="experiencia" class="page">
+        <h2>Experiência Profissional</h2>
+        <p class="fade-in">Spread Tecnologia - Testador de Software JR. 2024 - Presente.</p>
+        <p class="fade-in">TW Transportes - Técnico de Suporte 2023-2024.</p>
+    </section>
+
+    <section id="contato" class="page">
+        <h2>Contato</h2>
+        <p class="fade-in">Você pode me encontrar nas redes sociais:</p>
+        <div class="social-icons fade-in">
+            <a href="https://www.linkedin.com/in/v%C3%ADtor-almeida-machado-139760234/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/vitorvitoor" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
+            </a>
+        </div>
+        <p class="fade-in">Ou entre em contato pelo e-mail: <a href="mailto:seu-email@example.com">seu-email@example.com</a></p>
+    </section>
+</main>
+
+<footer>
+    <p>© 2024 Vítor Almeida Machado. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+    const links = document.querySelectorAll('nav a');
+    const pages = document.querySelectorAll('.page');
+
+    // Função para animação de fade-in nas seções
+    links.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const target = document.getElementById(link.getAttribute('data-target'));
+
+            pages.forEach(page => {
+                page.classList.remove('active');
+                page.innerHTML = page.innerHTML;
+            });
+
+            target.classList.add('active');
+
+            const paragraphs = target.querySelectorAll('p');
+            paragraphs.forEach((p, index) => {
+                p.style.animationDelay = `${index * 0.2}s`;
+                p.classList.add('fade-in');
+            });
+        });
+    });
+
+    // Função para mudar o estilo do header ao rolar
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+</script>
+
+</body>
+</html>

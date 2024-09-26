@@ -1,0 +1,125 @@
+:root {
+    --azul-profissional: #003366;
+    --cinza-claro: #eaeaea;
+    --cinza-escuro: #333333;
+    --branco: #ffffff;
+    --verde-profissional: #0e71d4;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--cinza-claro);
+    margin: 0;
+    padding: 0;
+    color: var(--cinza-escuro);
+}
+
+header {
+    background-color: var(--azul-profissional);
+    color: var(--branco);
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--branco);
+    margin: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    padding: 10px 15px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    transform: scale(1.1);
+    background-color: var(--verde-profissional);
+    border: 1px solid var(--verde-profissional);
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+    background-color: var(--branco);
+}
+
+h2 {
+    font-family: 'Josefin Slab', serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.page {
+    display: none;
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+    padding: 20px;
+    border-bottom: 1px solid var(--cinza-escuro);
+}
+
+.page.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+p {
+    line-height: 1.6;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.6s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+footer {
+    background-color: var(--azul-profissional);
+    color: var(--branco);
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+}
