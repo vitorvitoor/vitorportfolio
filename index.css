@@ -132,3 +132,31 @@ footer p {
     width: 40px;
     height: 40px;
 }
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Ajusta o tamanho da fonte para dispositivos menores */
+    }
+
+    h2 {
+        font-size: 28px; /* Reduz o tamanho do título para uma melhor exibição */
+    }
+
+    nav {
+        flex-direction: column; /* Organiza o menu verticalmente */
+    }
+
+    nav a {
+        margin: 5px 0; /* Reduz o espaço entre os links do menu */
+        font-size: 16px; /* Ajusta o tamanho da fonte dos links do menu */
+    }
+
+    main {
+        padding: 20px; /* Reduz o padding para melhor exibição em telas pequenas */
+    }
+
+    .profile-photo {
+        max-width: 100px; /* Reduz o tamanho da foto do perfil */
+    }
+}
